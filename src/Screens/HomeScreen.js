@@ -8,7 +8,7 @@ import ScoreBoard from '../Components/ScoreBoard';
 
 
 export default function HomeScreen() {
-    const [ison, setIson] = useState(false)
+    const [ison, setIson] = useState(true)
     return (
         <View style={{flex:1 ,  marginBottom:85}} >
             <ScrollView>
@@ -39,7 +39,7 @@ export default function HomeScreen() {
                             onColor="#FF4B00"
                             label="Live"
                             offColor="black"
-                            onToggle={isOn => setIson(!ison)}
+                            onToggle={() => setIson(!ison)}
                         />
         </View>
         <Games />
